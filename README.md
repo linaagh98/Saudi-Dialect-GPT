@@ -103,8 +103,16 @@ And this is our JSON file after processing:
   }]
 ```
 
+## SFT to the pre-trained model
+
+At this stage, we fine-tuned our pretrained GPT2 model. We got better losses with lower overfitting as shown in the graph. 
+
+![SFT Losses](SFT_Losses.png)
 
 
+
+## Evaluation
+After 
 
 
 
