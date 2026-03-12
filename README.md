@@ -14,4 +14,4 @@ This project includes:
 7. [Results](#Results)
 
 ## Data Preparation
-![Raw data](images/Raw_data.png)
+![Raw data](Raw_data.png)
