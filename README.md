@@ -14,7 +14,12 @@ This project includes:
 7. [Results](#Results)
 
 ## Data Preparation
-A dataset of Saudi dialect tweets was used to pre-train the GPT2 model from scratch, the raw dataset consisted of  
+The dataset used to pre-train the GPT2 model from scratch was Saudi dialect tweets. This dataset was obtained from the [figshare website](https://figshare.com/articles/dataset/Saudi_tweets_dataset/6983006?file=12808310). It is a raw dataset and contains a lot of unwanted characters and symbols as shown in the image. 
+
 ![Raw data](Raw_data.png)
 
+### Data pre-processing (cleaning) 
+Data pre-processing was applied to clean the data from URLs, mentions, hashtags, emojis, excessive repeating characters, and extra spaces. The following image shows the data after cleaning. 
+
 ![Clean data](clean_data.png)
+
