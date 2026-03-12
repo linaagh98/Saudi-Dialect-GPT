@@ -14,4 +14,7 @@ This project includes:
 7. [Results](#Results)
 
 ## Data Preparation
+A dataset of Saudi dialect tweets was used to pre-train the GPT2 model from scratch, the raw dataset consisted of  
 ![Raw data](Raw_data.png)
+
+![Clean data](clean_data.png)
