@@ -1,4 +1,5 @@
 # Saudi-Dialect-GPT
+# [the link for the notebook:](https://colab.research.google.com/drive/13pSwGPPgIxCuVi0Xhh7wBL8Ww9AbQtje#scrollTo=T47BgVe7Qr-4) 
 This project includes:
 1- Building a GPT2 from scratch
 
