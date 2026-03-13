@@ -34,7 +34,7 @@ GPT2 Byte-Pair Toknizer was used and retrained on our dataset.
 ## Training GPT2 form scratch
 A GPT2 was pre-trained from scratch on our dataset. Due to resource limitations, the model was trained for only 25 epochs. The small size of the data led to overfitting, as shown in the graph. Future work: using a pre-trained model and retraining it on our data might give us way better results. 
 
-![pre-training loss](pre-training_loss.png)
+![pre-training loss](Exp1.1.png)
 
 ## SFT data Preparation
 In this project, we used the pretrained model and fined-tune it on a conversational dataset from [Hugging Face](https://huggingface.co/datasets/HeshamHaroon/saudi-dialect-conversations). The dataset was in the form of conversations, we manipulated it to convert it to input and output pairs. To keep the history and context of the conversation, we used the input and output of a one conversation line as input to the next line and so on. 
@@ -112,10 +112,10 @@ At this stage, we fine-tuned our pretrained GPT2 model. We got better losses wit
 
 ![SFT Losses](SFT_Losses.png)
 
-
+|![SFT Losses](SFT_Losses.png)       | CAMO  |                      |       |           | 
 
 ## Evaluation
-After 
+Calculating Perplexity, using LLM as a judge, verifying that generated text follows instructions accurately, and providing a report identifying failure modes (e.g., repetition or context loss)..
 
 
 
