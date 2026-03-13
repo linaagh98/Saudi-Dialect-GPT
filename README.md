@@ -46,7 +46,7 @@ Observation: We can see from the graph that the model was overfitting. This coul
 
 - Perplexity on the test dataset: 12628.63
 
-- Inference example on the test dataset
+- Inference example on the test dataset (the Starting text was "هذا احنا")
 
 ![Pretraining_Inference](Pretraining_Inference.png)
 
