@@ -43,9 +43,6 @@ This was the structure of the JSON file:
 
 ```yaml
 {"messages": [{"role": "user", "content": "هلا والله يا أبو ناصر، تدري أنا أبي أسجل حقوق الملكية؟"}, {"role": "assistant", "content": "هلا محمد، وش سالفتك بالضبط؟ كيف تبي تسجلها؟"}, {"role": "user", "content": "يقولون فيه نظام جديد من وزارة الإسكان، لازم نسوي كذا وكذا."}, {"role": "assistant", "content": "طيب، تدري وش المطلوب منك؟ الأول تروح لموقع الوزارة الإلكتروني وتدخل معلوماتك."}, {"role": "user", "content": "أدري، بس فيه أوراق لازم أرفقها؟"}, {"role": "assistant", "content": "إيه، لازم ترفق عقد الملكية وصورة البطاقة، وربي ما قصرت بالنصيحة."}, {"role": "user", "content": "الله يعطيك العافية، بروح بنسوي الخطوات المطلوبة قبل نهاية الأسبوع."}], "scenario": "An employee asks their boss about the process of registering property rights with the Ministry of Housing as per the latest government guidelines.", "topic": "government_services", "complexity": "intermediate", "english_summary": "An employee inquires about the process of registering property rights with the Ministry of Housing under new government guidelines."}
-{"messages": [{"role": "user", "content": "وش رايك في ذا التلفزيون؟ ودنا نشتري واحد عشان نتابع النهائي."}, {"role": "assistant", "content": "والله زين، شاشته كبيرة ونقاوة الصورة عالية. يسوى الفلوس."}, {"role": "user", "content": "طيب، متى المباراة؟"}, {"role": "assistant", "content": "يقولون يوم الجمعة بعد صلاة العشاء."}, {"role": "user", "content": "يالبى قلبك، بنحجز التلفزيون ونتفرج سوا."}, {"role": "assistant", "content": "خلاص، ابغى اجيب لك واحد قبل ما يخلصون."}], "scenario": "In the Household section at Lulu Hypermarket, two colleagues discuss the best way to watch the upcoming football final on a new television.", "topic": "sports", "complexity": "simple", "english_summary": "Two colleagues discuss buying a new television at Lulu Hypermarket to watch the upcoming football final together."}
-{"messages": [{"role": "user", "content": "الطالب: يبه، ودي اروح محل الحيوانات اللي في التحلية ونشتري قطه."}, {"role": "assistant", "content": "المعلم: طيب، بس لازم تحط ميزانية للأكل والرعاية. ماهو بس تشتريها وبس."}, {"role": "user", "content": "الطالب: ابي قطه، تدري وش يحتاجون؟"}, {"role": "assistant", "content": "المعلم: لازم تشتري لها أكل خاص، ورمل للحمام، وألعاب. يعني تكاليفها مو قليل."}, {"role": "user", "content": "الطالب: ايه، والله ما فكرت بهالشي، وش بعد؟"}, {"role": "assistant", "content": "المعلم: بعد لازم تكشف عليها عند الطبيب البيطري كل فترة، علشان صحتها."}, {"role": "user", "content": "الطالب: ما شاء الله، بتطلع غالية، كذا يكفي الميزانية؟"}, {"role": "assistant", "content": "المعلم: ايه، بس إذا خططت صح، تقدر توازن بين المصاريف وتشتري كل شيء لها."}], "scenario": "En route to a pet store in Riyadh, a teacher advises a student on budgeting and considerations for purchasing a pet.", "topic": "shopping", "complexity": "intermediate", "english_summary": "A teacher advises a student on how to budget for pet supplies and what to consider when buying a pet."}
-{"messages": [{"role": "user", "content": "وش رايك نروح السوق عند جامع الإمام الشافعي؟ يقولون عندهم سلال حلوة لرمضان."}, {"role": "assistant", "content": "ايه والله فكرة ممتازة. يالبى قلبك، انا ابي سلة تكون فيها تمر وبخور وكذا."}, {"role": "user", "content": "تدري انا سمعت انهم يحطون فيها حلوى وكيك زعفران بعد، وش رايك؟"}, {"role": "assistant", "content": "والله شي طيب، ما شاء الله. خلاص نروح ونشوف وش عندهم."}, {"role": "user", "content": "طيب، بنسوي كذا. متى نطلع؟"}, {"role": "assistant", "content": "بنطلع بعد صلاة العشاء. تسلم، الله يعطيك العافية."}], "scenario": "Choosing the right gift baskets for visitors during Ramadan, available at the marketplace near Imam Ash-Shafii Mosque", "topic": "shopping", "complexity": "intermediate", "english_summary": "Two people discuss visiting a marketplace near Imam Ash-Shafii Mosque to buy gift baskets for Ramadan."}
 ```
 
 And this is our JSON file after processing: 
@@ -63,46 +60,6 @@ And this is our JSON file after processing:
   {
     "input": "هلا والله يا أبو ناصر، تدري أنا أبي أسجل حقوق الملكية؟\nهلا محمد، وش سالفتك بالضبط؟ كيف تبي تسجلها؟\nيقولون فيه نظام جديد من وزارة الإسكان، لازم نسوي كذا وكذا.\nطيب، تدري وش المطلوب منك؟ الأول تروح لموقع الوزارة الإلكتروني وتدخل معلوماتك.\nأدري، بس فيه أوراق لازم أرفقها؟",
     "output": "إيه، لازم ترفق عقد الملكية وصورة البطاقة، وربي ما قصرت بالنصيحة. <|endoftext|>"
-  },
-  {
-    "input": "وش رايك في ذا التلفزيون؟ ودنا نشتري واحد عشان نتابع النهائي.",
-    "output": "والله زين، شاشته كبيرة ونقاوة الصورة عالية. يسوى الفلوس. <|endoftext|>"
-  },
-  {
-    "input": "وش رايك في ذا التلفزيون؟ ودنا نشتري واحد عشان نتابع النهائي.\nوالله زين، شاشته كبيرة ونقاوة الصورة عالية. يسوى الفلوس.\nطيب، متى المباراة؟",
-    "output": "يقولون يوم الجمعة بعد صلاة العشاء. <|endoftext|>"
-  },
-  {
-    "input": "وش رايك في ذا التلفزيون؟ ودنا نشتري واحد عشان نتابع النهائي.\nوالله زين، شاشته كبيرة ونقاوة الصورة عالية. يسوى الفلوس.\nطيب، متى المباراة؟\nيقولون يوم الجمعة بعد صلاة العشاء.\nيالبى قلبك، بنحجز التلفزيون ونتفرج سوا.",
-    "output": "خلاص، ابغى اجيب لك واحد قبل ما يخلصون. <|endoftext|>"
-  },
-  {
-    "input": "الطالب: يبه، ودي اروح محل الحيوانات اللي في التحلية ونشتري قطه.",
-    "output": "المعلم: طيب، بس لازم تحط ميزانية للأكل والرعاية. ماهو بس تشتريها وبس. <|endoftext|>"
-  },
-  {
-    "input": "الطالب: يبه، ودي اروح محل الحيوانات اللي في التحلية ونشتري قطه.\nالمعلم: طيب، بس لازم تحط ميزانية للأكل والرعاية. ماهو بس تشتريها وبس.\nالطالب: ابي قطه، تدري وش يحتاجون؟",
-    "output": "المعلم: لازم تشتري لها أكل خاص، ورمل للحمام، وألعاب. يعني تكاليفها مو قليل. <|endoftext|>"
-  },
-  {
-    "input": "الطالب: يبه، ودي اروح محل الحيوانات اللي في التحلية ونشتري قطه.\nالمعلم: طيب، بس لازم تحط ميزانية للأكل والرعاية. ماهو بس تشتريها وبس.\nالطالب: ابي قطه، تدري وش يحتاجون؟\nالمعلم: لازم تشتري لها أكل خاص، ورمل للحمام، وألعاب. يعني تكاليفها مو قليل.\nالطالب: ايه، والله ما فكرت بهالشي، وش بعد؟",
-    "output": "المعلم: بعد لازم تكشف عليها عند الطبيب البيطري كل فترة، علشان صحتها. <|endoftext|>"
-  },
-  {
-    "input": "الطالب: يبه، ودي اروح محل الحيوانات اللي في التحلية ونشتري قطه.\nالمعلم: طيب، بس لازم تحط ميزانية للأكل والرعاية. ماهو بس تشتريها وبس.\nالطالب: ابي قطه، تدري وش يحتاجون؟\nالمعلم: لازم تشتري لها أكل خاص، ورمل للحمام، وألعاب. يعني تكاليفها مو قليل.\nالطالب: ايه، والله ما فكرت بهالشي، وش بعد؟\nالمعلم: بعد لازم تكشف عليها عند الطبيب البيطري كل فترة، علشان صحتها.\nالطالب: ما شاء الله، بتطلع غالية، كذا يكفي الميزانية؟",
-    "output": "المعلم: ايه، بس إذا خططت صح، تقدر توازن بين المصاريف وتشتري كل شيء لها. <|endoftext|>"
-  },
-  {
-    "input": "وش رايك نروح السوق عند جامع الإمام الشافعي؟ يقولون عندهم سلال حلوة لرمضان.",
-    "output": "ايه والله فكرة ممتازة. يالبى قلبك، انا ابي سلة تكون فيها تمر وبخور وكذا. <|endoftext|>"
-  },
-  {
-    "input": "وش رايك نروح السوق عند جامع الإمام الشافعي؟ يقولون عندهم سلال حلوة لرمضان.\nايه والله فكرة ممتازة. يالبى قلبك، انا ابي سلة تكون فيها تمر وبخور وكذا.\nتدري انا سمعت انهم يحطون فيها حلوى وكيك زعفران بعد، وش رايك؟",
-    "output": "والله شي طيب، ما شاء الله. خلاص نروح ونشوف وش عندهم. <|endoftext|>"
-  },
-  {
-    "input": "وش رايك نروح السوق عند جامع الإمام الشافعي؟ يقولون عندهم سلال حلوة لرمضان.\nايه والله فكرة ممتازة. يالبى قلبك، انا ابي سلة تكون فيها تمر وبخور وكذا.\nتدري انا سمعت انهم يحطون فيها حلوى وكيك زعفران بعد، وش رايك؟\nوالله شي طيب، ما شاء الله. خلاص نروح ونشوف وش عندهم.\nطيب، بنسوي كذا. متى نطلع؟",
-    "output": "بنطلع بعد صلاة العشاء. تسلم، الله يعطيك العافية. <|endoftext|>"
   }]
 ```
 
@@ -112,7 +69,6 @@ At this stage, we fine-tuned our pretrained GPT2 model. We got better losses wit
 
 ![SFT Losses](SFT_Losses.png)
 
-|![SFT Losses](SFT_Losses.png)       | CAMO  |                      |       |           | 
 
 ## Evaluation
 Calculating Perplexity, using LLM as a judge, verifying that generated text follows instructions accurately, and providing a report identifying failure modes (e.g., repetition or context loss)..
