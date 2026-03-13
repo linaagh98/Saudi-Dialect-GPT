@@ -107,8 +107,9 @@ We also used an LLM model as a judge for our model's output. We gave the model's
 
 
 ## Failure modes 
+Some failure modes our model showed were producing sentences out of context. The image below shows that the model produced some sentences related to the input, but then started producing sentences about different topic. 
 
-(e.g., repetition or context loss)..
+![ModelResponses](ModelResponses.png)
 
 
 ## Future Work
