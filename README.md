@@ -11,12 +11,10 @@ This project includes:
 1. [Data Preparation](#Data-Preparation)
 2. [Toknization](#Toknization)
 3. [Training GPT2 form scratch](#Training_GPT2_form_scratch)
-4. [Fine Tuning a GPT2 model on our Saudi dataset](#Fine_Tuning_GPT2)
-5. [SFT data Preparation](#SFT-data-Preparation)
-6. [SFT on the GPT2 model trained form scratch](#SFT-on-the_new_trained-model)
-7. [SFT on the GPT2 model pretrained on our data](#SFT-on-the_pre-trained-model)
-8. [Evaluation](#Evaluation)
-9. [Results](#Results)
+4. [SFT data Preparation](#SFT-data-Preparation)
+5. [SFT on the GPT2 model trained form scratch](#SFT-on-the_new_trained-model)
+6. [Evaluation](#Evaluation)
+7. [Future work](#EFuture_work)
 
 ## Data Preparation
 The dataset used to pre-train the GPT2 model from scratch was Saudi dialect tweets. This dataset was obtained from the [figshare website](https://figshare.com/articles/dataset/Saudi_tweets_dataset/6983006?file=12808310). It is a raw dataset and contains a lot of unwanted characters and symbols as shown in the image. 
@@ -29,14 +27,25 @@ Data pre-processing was applied to clean the data from URLs, mentions, hashtags,
 ![Clean data](clean_data.png)
 
 ## Toknization
-GPT2 Byte-Pair Toknizer was used and retrained on our dataset.
+GPT2 Byte-Pair Toknizer was used and retrained on our dataset. The image below shows how the retrained tokenizer was able to tokenize Arabic text well and not just splitting the text into single letters. 
 
-![Toknization](Toknization_Results.png)
+![Toknization](retrained_toknizer.png)
 
 ## Training GPT2 form scratch
-A GPT2 was pre-trained from scratch on our dataset. Due to resource limitations, the model was trained for only 25 epochs. The small size of the data led to overfitting, as shown in the graph. Future work: using a pre-trained model and retraining it on our data might give us way better results. 
+A GPT2 was trained from scratch on our dataset. Due to resource limitations, the model was trained for only 25 epochs. The small size of the data led to overfitting, as shown in the graph. Future work: using a pre-trained model and retraining it on our data might give us way better results. 
+
+Results of this experement: 
+- Training and validation loss plot
 
 ![pre-training loss](pre-training_lossPlot.png)
+Observation: We can see from the graph that the model was overfitting. This could be a result of the small size of the dataset, considering the large size of the model. Although the used dataset wasn't too small but it was nothing compared to what LLMs usually needs to perform well. Due to resource limitations, we weren't able to use a larger dataset. 
+
+- Loss on the test dataset: 9.4437
+
+- Perplexity on the test dataset: 12628.63
+
+- Inference example on the test dataset
+
 ![Pretraining_Inference](Pretraining_Inference.png)
 
 
@@ -79,7 +88,9 @@ At this stage, we fine-tuned our pretrained GPT2 model. We got better losses wit
 Calculating Perplexity, using LLM as a judge, verifying that generated text follows instructions accurately, and providing a report identifying failure modes (e.g., repetition or context loss)..
 
 
-
+## Future Work
+Using a pre-trained model and retraining it on our Saudi data, which may yield significantly better results when applying SFT. 
+Using a larger and better training dataset. 
 
 
 
