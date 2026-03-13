@@ -10,11 +10,13 @@ This project includes:
 ## Contents
 1. [Data Preparation](#Data-Preparation)
 2. [Toknization](#Toknization)
-3. [Training](#Training)
-4. [SFT data Preparation](#SFT-data-Preparation)
-5. [SFT to the pre-trained model](#SFT-to-the=pre-trained-model)
-6. [Evaluation](#Evaluation)
-7. [Results](#Results)
+3. [Training GPT2 form scratch](#Training_GPT2_form_scratch)
+4. [Fine Tuning a GPT2 model on our Saudi dataset](#Fine_Tuning_GPT2)
+5. [SFT data Preparation](#SFT-data-Preparation)
+6. [SFT on the GPT2 model trained form scratch](#SFT-on-the_new_trained-model)
+7. [SFT on the GPT2 model pretrained on our data](#SFT-on-the_pre-trained-model)
+8. [Evaluation](#Evaluation)
+9. [Results](#Results)
 
 ## Data Preparation
 The dataset used to pre-train the GPT2 model from scratch was Saudi dialect tweets. This dataset was obtained from the [figshare website](https://figshare.com/articles/dataset/Saudi_tweets_dataset/6983006?file=12808310). It is a raw dataset and contains a lot of unwanted characters and symbols as shown in the image. 
@@ -26,10 +28,10 @@ Data pre-processing was applied to clean the data from URLs, mentions, hashtags,
 
 ![Clean data](clean_data.png)
 
-##Toknization
+## Toknization
 GPT2 Byte-Pair Toknizer was used and retrained on our dataset.
 
-## Training
+## Training GPT2 form scratch
 A GPT2 was pre-trained from scratch on our dataset. Due to resource limitations, the model was trained for only 25 epochs. The small size of the data led to overfitting, as shown in the graph. Future work: using a pre-trained model and retraining it on our data might give us way better results. 
 
 ![pre-training loss](pre-training_loss.png)
@@ -104,7 +106,7 @@ And this is our JSON file after processing:
   }]
 ```
 
-## SFT to the pre-trained model
+## SFT on the GPT2 model trained form scratch 
 
 At this stage, we fine-tuned our pretrained GPT2 model. We got better losses with lower overfitting as shown in the graph. 
 
