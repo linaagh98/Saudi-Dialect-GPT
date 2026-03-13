@@ -16,7 +16,8 @@ This project includes:
 4. [SFT data Preparation](#SFT-data-Preparation)
 5. [SFT on the GPT2 model trained form scratch](#SFT-on-the_new_trained-model)
 6. [Evaluation](#Evaluation)
-7. [Future work](#EFuture_work)
+7. [Failure modes](#EFailure_modes)
+8. [Future work](#EFuture_work)
 
 ## Data Preparation
 The dataset used to pre-train the GPT2 model from scratch was Saudi dialect tweets. This dataset was obtained from the [figshare website](https://figshare.com/articles/dataset/Saudi_tweets_dataset/6983006?file=12808310). It is a raw dataset and contains a lot of unwanted characters and symbols as shown in the image. 
@@ -87,16 +88,27 @@ At this stage, we fine-tuned our pretrained GPT2 model. We got better losses wit
 
 ![SFT Losses](SFT_LossPlot.png)
 
-- Loss on the test dataset: 
+- Loss on the test dataset: 3.0241
 
-- Perplexity on the test dataset: 
+- Perplexity on the test dataset: 20.58
 
 - Inference example on the test dataset
 
 ![SFT_Inference](SFT_Inference.png)
 
 ## Evaluation
-Calculating Perplexity, using LLM as a judge, verifying that generated text follows instructions accurately, and providing a report identifying failure modes (e.g., repetition or context loss)..
+To evaluate the model, we calculated loss and perplexity on the test dataset. We also viewed the model's responses to our instruction inputs on the test dataset. 
+The following image shows the model's responses to the first 4 samples in the test dataset. 
+
+![ModelResponses](ModelResponses.png)
+
+We also used an LLM model as a judge for our model's output. We gave the model's responses shown earlier to ChatGPT4 and asked it to evaluate them 
+
+
+
+## Failure modes 
+
+(e.g., repetition or context loss)..
 
 
 ## Future Work
