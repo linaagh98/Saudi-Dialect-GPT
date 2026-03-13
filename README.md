@@ -102,12 +102,11 @@ The following image shows the model's responses to the first 4 samples in the te
 
 ![ModelResponses](ModelResponses.png)
 
-We also used an LLM model as a judge for our model's output. We gave the model's responses shown earlier to ChatGPT4 and asked it to evaluate them 
-
+We also used an LLM model as a judge for our model's output. We gave the model's four responses shown earlier to ChatGPT4 and asked it to evaluate them. It evaluated the model responses on the following criteria: (Relevance, Coherence, Dialect Authenticity, Informativeness, Generation Quality) and gave a score from 0-5 on each of them. It gave each response the following scores respectively (9/25, 13/25, 13/25, 14/25)، which sums up to an overall quality of 49%. 
 
 
 ## Failure modes 
-Some failure modes our model showed were producing sentences out of context. The image below shows that the model produced some sentences related to the input, but then started producing sentences about different topic. 
+Some failure modes our model showed were producing sentences out of context. The image below shows that the model produced some sentences related to the input, but then started producing sentences about a different topic. 
 
 ![ModelResponses](ModelResponses.png)
 
