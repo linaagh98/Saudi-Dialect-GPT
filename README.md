@@ -2,11 +2,12 @@
 # [The notebook link](https://colab.research.google.com/drive/1-JyFgdj7r-t5ywaxFVVxqTtm9_3H4cAv)
 
 This project includes:
+
 1- Building a GPT2 from scratch
 
 2- Training a GPT2 tokenizer on Saudi raw data (tweets)
 
-3- Applying SFT to the pre-trained model, training it to answer in a Saudi dialect. 
+3- Applying SFT to our pre-trained model, teaching it to answer in a Saudi dialect. 
 
 ## Contents
 1. [Data Preparation](#Data-Preparation)
@@ -51,7 +52,7 @@ Observation: We can see from the graph that the model was overfitting. This coul
 
 
 ## SFT data Preparation
-In this project, we used the pretrained model and fined-tune it on a conversational dataset from [Hugging Face](https://huggingface.co/datasets/HeshamHaroon/saudi-dialect-conversations). The dataset was in the form of conversations, we manipulated it to convert it to input and output pairs. To keep the history and context of the conversation, we used the input and output of a one conversation line as input to the next line and so on. 
+In this project, we used the trained model and fine-tuned it on a conversational dataset from [Hugging Face](https://huggingface.co/datasets/HeshamHaroon/saudi-dialect-conversations). The dataset was in the form of conversations; we manipulated it to convert it to input and output pairs. To keep the history and context of the conversation, we used the input and output of one conversation line as input to the next line and so on. 
 
 This was the structure of the JSON file: 
 
@@ -77,13 +78,22 @@ And this is our JSON file after processing:
   }]
 ```
 
-## SFT on the GPT2 model trained form scratch 
+## SFT on the pre-trained GPT2 model  
 
-At this stage, we fine-tuned our pretrained GPT2 model. We got better losses with lower overfitting as shown in the graph. 
+At this stage, we fine-tuned our pretrained GPT2 model. We got better losses with almost non overfitting, as shown in the graph. 
+
+
+- Training and validation loss plot
 
 ![SFT Losses](SFT_LossPlot.png)
-![SFT_Inference](SFT_Inference.png)
 
+- Loss on the test dataset: 
+
+- Perplexity on the test dataset: 
+
+- Inference example on the test dataset
+
+![SFT_Inference](SFT_Inference.png)
 
 ## Evaluation
 Calculating Perplexity, using LLM as a judge, verifying that generated text follows instructions accurately, and providing a report identifying failure modes (e.g., repetition or context loss)..
