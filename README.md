@@ -1,6 +1,6 @@
 # Saudi-Dialect-GPT
-# [The notebook link](https://colab.research.google.com/drive/1-JyFgdj7r-t5ywaxFVVxqTtm9_3H4cAv)
-
+## [The notebook link](https://colab.research.google.com/drive/1-JyFgdj7r-t5ywaxFVVxqTtm9_3H4cAv)
+## [Demo link](https://drive.google.com/file/d/1XA9npd4oRqTnBwGYVs1zJO0WFfft76m9/view?usp=sharing)
 This project includes:
 
 1- Building a GPT2 from scratch
@@ -17,7 +17,8 @@ This project includes:
 5. [SFT on the GPT2 model trained form scratch](#SFT-on-the_new_trained-model)
 6. [Evaluation](#Evaluation)
 7. [Failure modes](#EFailure_modes)
-8. [Future work](#EFuture_work)
+8. [Demo](#Demo)
+9. [Future work](#EFuture_work)
 
 ## Data Preparation
 The dataset used to pre-train the GPT2 model from scratch was Saudi dialect tweets. It was obtained from the [figshare website](https://figshare.com/articles/dataset/Saudi_tweets_dataset/6983006?file=12808310). The dataset consists of 192125 raw tweets and contains a lot of unwanted characters and symbols, as shown in the image below. 
@@ -110,6 +111,8 @@ Some failure modes our model showed were producing sentences out of context. The
 
 ![FaliureMode](FaliureMode.png)
 
+## Demo
+[This link contains a demo of the entire project.](https://drive.google.com/file/d/1XA9npd4oRqTnBwGYVs1zJO0WFfft76m9/view?usp=sharing)
 
 ## Future Work
 Using a pre-trained model and retraining it on our Saudi data, which may yield significantly better results when applying SFT. 
